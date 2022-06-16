@@ -1,0 +1,96 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+$dark-primary-text: rgba(black, 0.87);
+$light-primary-text: white;
+$mat-indigo: ( 50: #e8eaf6, 100: #c5cae9, 200: #9fa8da, 300: #7986cb, 400: #5c6bc0, 500: #3f51b5, 600: #3949ab, 700: #303f9f, 800: #283593, 900: #1a237e, A100: #8c9eff, A200: #536dfe, A400: #3d5afe, A700: #304ffe, contrast: ( 50: $dark-primary-text, 100: $dark-primary-text, 200: $dark-primary-text, 300: $light-primary-text, 400: $light-primary-text, 500: $light-primary-text, 600: $light-primary-text, 700: $light-primary-text, 800: $light-primary-text, 900: $light-primary-text, A100: $dark-primary-text, A200: $light-primary-text, A400: $light-primary-text, A700: $light-primary-text, ) );
+$mat-pink: ( 50: #FCE4EC, 100: #F8BBD0, 200: #F48FB1, 300: #F06292, 400: #EC407A, 500: #E91E63, 600: #D81B60, 700: #C2185B, 800: #AD1457, 900: #880E4F, A100: #FF80AB, A200: #FF4081, A400: #F50057, A700: #C51162, contrast: ( 50: $dark-primary-text, 100: $dark-primary-text, 200: $dark-primary-text, 300: $dark-primary-text, 400: $dark-primary-text, 500: $light-primary-text, 600: $light-primary-text, 700: $light-primary-text, 800: $light-primary-text, 900: $light-primary-text, A100: $dark-primary-text, A200: $light-primary-text, A400: $light-primary-text, A700: $light-primary-text, ) );
+$mat-yellow: ( 50: #FFFDE7, 100: #FFF9C4, 200: #FFF59D, 300: #FFF176, 400: #FFEE58, 500: #FFEB3B, 600: #FDD835, 700: #FBC02D, 800: #F9A825, 900: #F57F17, A100: #FFFF8D, A200: #FFFF00, A400: #FFEA00, A700: #FFD600, contrast: ( 50: $dark-primary-text, 100: $dark-primary-text, 200: $dark-primary-text, 300: $light-primary-text, 400: $light-primary-text, 500: $light-primary-text, 600: $light-primary-text, 700: $light-primary-text, 800: $light-primary-text, 900: $light-primary-text, A100: $dark-primary-text, A200: $light-primary-text, A400: $light-primary-text, A700: $light-primary-text, ) );
+$theme-blue: #0080ed;
+$mat-gray: ( 50: #FAFAFA, 100: #F5F5F5, 200: #EEEEEE, 300: #E0E0E0, 400: #BDBDBD, 500: #9E9E9E, 600: #757575, 700: #616161, 800: #424242, 900: #212121, contrast: ( 50: $dark-primary-text, 100: $dark-primary-text, 200: $dark-primary-text, 300: $dark-primary-text, 400: $dark-primary-text, 500: $dark-primary-text, 600: $light-primary-text, 700: $light-primary-text, 800: $light-primary-text, 900: $light-primary-text, ) );
+$mat-red: ( 50: #ffebee, 100: #ffcdd2, 200: #ef9a9a, 300: #e57373, 400: #ef5350, 500: #f44336, 600: #e53935, 700: #d32f2f, 800: #c62828, 900: #b71c1c, A100: #ff8a80, A200: #ff5252, A400: #ff1744, A700: #d50000, contrast: ( 50: $dark-primary-text, 100: $dark-primary-text, 200: $dark-primary-text, 300: $dark-primary-text, 400: $dark-primary-text, 500: $light-primary-text, 600: $light-primary-text, 700: $light-primary-text, 800: $light-primary-text, 900: $light-primary-text, A100: $dark-primary-text, A200: $light-primary-text, A400: $light-primary-text, A700: $light-primary-text, ) );
+$mat-LightBlue: ( 50: #E1F5FE, 100: #B3E5FC, 200: #81D4FA, 300: #4FC3F7, 400: #29B6F6, 500: #03A9F4, 600: #039BE5, 700: #0288D1, 800: #0277BD, 900: #01579B, A100: #80D8FF, A200: #40C4FF, A400: #00B0FF, A700: #0091EA, contrast: ( 50: $dark-primary-text, 100: $dark-primary-text, 200: $dark-primary-text, 300: $dark-primary-text, 400: $dark-primary-text, 500: $dark-primary-text, 600: $light-primary-text, 700: $light-primary-text, 800: $light-primary-text, 900: $light-primary-text, ) );
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$twitter-primary: mat-palette($mat-indigo, 500);
+$twitter-accent: mat-palette($mat-LightBlue, 900);
+$twitter-yel: mat-palette($mat-yellow, 500);
+$twitter-pnk: mat-palette($mat-pink, 600);
+$twitter-gry: mat-palette($mat-gray, 700);
+// The warn palette is optional (defaults to red).
+$twitter-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$twitter-theme: mat-light-theme($twitter-primary, $twitter-accent, $twitter-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+.twitter {
+  @include angular-material-theme($twitter-theme);
+}
+
+.twitter .main-bg {
+  background: mat-color($mat-yellow, 900);
+}
+
+.twitter .profile-head-bg {
+  background-color: mat-color($mat-indigo, 700);
+}
+
+.twitter .primery-bg {
+  background-color: #fff
+}
+
+.twitter .yel {
+  background: mat-color($twitter-yel);
+}
+
+.twitter .pnk {
+  background: mat-color($twitter-pnk);
+}
+
+.twitter .blu {
+  background: $theme-blue;
+}
+
+.twitter .gry {
+  background: mat-color($twitter-gry);
+}
+
+.twitter .txt-white {
+  background: $light-primary-text;
+}
+
+.twitter .main-color {
+  color: mat-color($mat-gray, 500)
+}
+
+.twitter .primery-color {
+  color: mat-color($mat-red, 500)
+}
+
+
+
+.twitter .right-border {
+  border-right: solid 1px #e9e9e9 !important;
+}
+.twitter .bottem-border {
+  border-bottom: solid 1px #e9e9e9 !important;
+}
+.twitter .side-border {
+  border-left: solid 1px #e9e9e9 !important;
+  border-right: solid 1px #e9e9e9 !important;
+}
+.twitter .card-border {
+  vertical-align: top;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 3px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background: #fff
+}
+

@@ -1,0 +1,210 @@
+/*<!-- header style start-- >*/
+.header .first-row {
+  background: #fff;
+}
+
+  .header .first-row .logo img {
+    width: 68px
+  }
+
+  .header .first-row .search-box {
+    background: #f3f9fd
+  }
+
+  .header .first-row .search-box {
+    background: #f3f9fd
+  }
+
+    .header .first-row .search-box mat-icon {
+      color: #222
+    }
+
+    .header .first-row .search-box input:focus {
+      outline: none;
+    }
+
+    .header .first-row .search-box input {
+      padding: 0 10px;
+      height: 40px;
+      font-size: 15px;
+      width: 100%;
+      color: #222;
+      background: #f3f9fd;
+      border-radius: 3px;
+      border: none;
+    }
+
+  .header .first-row.user-info img {
+    border-radius: 50%;
+    color: #222;
+    width: 50px
+  }
+
+  .header .first-row .user-info img {
+    border-radius: 50%;
+    color: #222;
+    width: 50px
+  }
+/*<!-- header style end-- >*/
+
+/*aside menu style start*/
+.side-menu ul li {
+  list-style-type: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.side-menu ul {
+  margin: -2px 0 0;
+  padding: 0;
+}
+
+  .side-menu ul li a {
+    color: #aeb2b7;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0 10px 25px;
+    font-size: 12px;
+    outline: 0;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+  }
+
+  .side-menu ul li span {
+    font-size: 15px;
+    color: #6c6363;
+    font-weight: bold;
+  }
+
+.side-menu button {
+  border-radius: 20px;
+  background: #5da9dd
+}
+/*aside menu style end*/
+
+/*<!-- account-information card style start-- >*/
+.account-information .profile-info {
+  height: 330px;
+  left:-16px
+}
+
+  .account-information .profile-info mat-grid-tile {
+    height: -webkit-fill-available!important;
+  }
+  .account-information .profile-info mat-grid-tile img {
+    border-radius: 50%;
+    color: #222;
+    width: 80px
+  }
+
+  .account-information .profile-info mat-grid-tile .circle-icon {
+    position: absolute;
+    left: 29px;
+    color: #0072c0;
+  }
+.account-information .menu{
+    left:-16px
+}
+.account-information .menu .menu-item {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+  .account-information .menu .menu-item ~ .active {
+    background: #fff !important;
+    color: blue !important;
+  }
+
+/*<!-- account-information card style end-- >*/
+
+/*<!-- tweet content section style start-- >*/
+
+::ng-deep .mat-tab-label {
+  height: 64px !important;
+}
+
+::ng-deep .mat-list-base .mat-list-item {
+  height: 64px !important
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.tweets .tweet > img {
+  border-radius: 50%;
+  color: #222;
+  width: 65px;
+  vertical-align: top;
+  margin-right: 24px;
+}
+
+.tweets .tweet .tweet-content {
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  display: inline-block;
+  width: calc(100% - 89px);
+  border-radius: 8px;
+  min-height: 211px;
+  /*border: 1px solid #e9e9e9;*/
+}
+
+  .tweets .tweet .tweet-content .img-file {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+
+  .tweets .tweet .tweet-content .comment {
+    box-shadow: rgba(67, 71, 85, 0.12) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  }
+
+    .tweets .tweet .tweet-content .comment img {
+      border-radius: 50%;
+      color: #222;
+      width: 45px;
+      vertical-align: top;
+      margin-right: 10px;
+    }
+/*<!-- tweet content section style end-- >*/
+/*start trends cars Style*/
+.trends .trends-box-title {
+  height: 64px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.trends .trend-item mat-icon {
+  position: absolute;
+  right: 15px;
+}
+
+/*end trends cars Style*/
+/*start options-to-follow-card Style*/
+
+.options-to-follow-card .options-card-title {
+  height: 64px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+  .options-to-follow-card .options-card-title mat-icon` {
+    position: absolute;
+    right: 15px;
+  }
+
+.options-to-follow-card .suggestedUser img {
+  border-radius: 50%;
+  color: #222;
+  width: 50px
+}
+
+.options-to-follow-card .suggestedUser {
+  font-size: 13px
+}
+
+  .options-to-follow-card .suggestedUser button {
+    position: absolute;
+    right: 15px;
+    border-radius: 20px;
+    background: #5da9dd
+  }

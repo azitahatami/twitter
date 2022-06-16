@@ -1,0 +1,252 @@
+<main>
+  <!--header html Section-->
+  <section>
+    <mat-toolbar class="header">
+      <mat-toolbar-row class="first-row">
+        <div class="col-md-2 logo">
+          <img src="assets/images/twitter/logo.jpg" alt="" title="" />
+        </div>
+        <div class="col-md-3">
+          <button mat-button>About</button>
+          <button mat-button color="primary">Help</button>
+        </div>
+        <div class="search-box col-md-4 ">
+          <mat-icon matPrefix class="align-middle ">search</mat-icon>
+          <input type="text"
+                 placeholder="Search On Twitter"
+                 [(ngModel)]="searchInput"
+                 aria-label="State">
+        </div>
+        <div class="user-info col-md-3 d-flex justify-content-end align-items-center">
+          <span class="mx-2">Azita Hatami</span>
+          <img src="assets/images/twitter/userImage.jpg" />
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </section>
+  <!---------------------------------scontent html Section----------------------------->
+  <section>
+    <!-----------------------------side menu html tag--------------------------------->
+    <div class="col-md-2 d-inline-block side-menu">
+      <ul class="nano-content mt-5">
+        <li class="sub-menu">
+          <a href="#"><mat-icon class="align-bottom">home</mat-icon><span class="px-3">Home</span></a>
+        </li>
+        <li class="sub-menu">
+          <a href="#"><mat-icon class="align-bottom">explore</mat-icon><span class="px-3">Explore</span></a>
+        </li>
+        <li class="sub-menu">
+          <a href="#"><mat-icon class="align-bottom">notifications</mat-icon><span class="px-3">Notification</span></a>
+        </li>
+        <li class="sub-menu active">
+          <a href="#"><mat-icon class="align-bottom">email</mat-icon><span class="px-3">Massages</span></a>
+        </li>
+        <li class="sub-menu">
+          <a href="#"><mat-icon class="align-bottom">bookmark</mat-icon><span class="px-3">Bookmarks</span></a>
+        </li>
+        <li class="sub-menu">
+          <a href="#"><mat-icon class="align-bottom">person</mat-icon><span class="px-3">Profile</span></a>
+        </li>
+        <li class="sub-menu">
+          <a href="#"><mat-icon class="align-bottom">more_horiz</mat-icon><span class="px-3">more</span></a>
+        </li>
+      </ul>
+
+      <button mat-flat-button color="primary" class="mt-5 d-block mx-auto text-center" (click)="showInfo()">Tweet</button>
+    </div>
+    <div class="col-md-10 d-inline-block px-0" style="vertical-align:top;border: 1px solid #e6eff5;background: #f3f9fd;">
+      <img src="assets/images/twitter/intbanner1.jpg" style="border-radius: 0px 0px 36px 0px;width: 100%;height: 286px;" />
+      <!--content-section html start-->
+      <section class="col-md-11 m-auto " style="top:-64px;position:relative">
+        <!--account-information card html start-->
+        <div class="col-md-3 d-inline-block account-information">
+          <div class="mx-3">
+            <mat-grid-list cols="1" rowHeight="1:1" class=" mb-3 profile-info">
+              <mat-grid-tile class="mx-3 card-border">
+                <div class="m-auto text-center">
+                  <mat-icon class="circle-icon">check_circle</mat-icon>
+                  <img class="d-block mx-auto" src="assets/images/twitter/userImage.jpg" alt="" title="" />
+                  <span class="d-block mt-2 font-weight-bold" style="font-weight:bold"> {{userInfo.name}} {{userInfo.lastName}}</span>
+                  <span class="d-block mt-2 font-weight-bold  main-color" style="font-weight:bold"> {{userInfo.userName}}</span>
+                  <div class="user-location d-block mt-2">
+                    <mat-icon class="align-middle"> location_on</mat-icon> <span class="mx-3 font-weight-bold">{{userInfo.location}}</span> <mat-icon class="align-middle"> location_on</mat-icon>
+                  </div>
+                  <p class="px-4 mt-2">{{userInfo.bio}}</p>
+                  <mat-grid-list class="mt-2 col-md-12 observe" cols="3" rowHeight="3:1">
+                    <mat-grid-tile class="py-5 primery-bg">
+                      <div>
+                        <h4 class="font-weight-bold m-0 main-color">Tweets</h4>
+                        <h4 class="font-weight-bold">747</h4>
+                      </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="py-5 primery-bg side-border">
+                      <div>
+                        <h4 class="font-weight-bold m-0 main-color">Followers</h4>
+                        <h4 class="font-weight-bold">42K</h4>
+                      </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="py-5 primery-bg">
+                      <div>
+                        <h4 class="font-weight-bold m-0 main-color">Following</h4>
+                        <h4 class="font-weight-bold">524</h4>
+                      </div>
+                    </mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+              </mat-grid-tile>
+            </mat-grid-list>
+            <mat-grid-list class="menu" cols="2" rowHeight="2:1" [gutterSize]="'15px'">
+              <mat-grid-tile class="mx-3 mb-1 menu-item" (click)="selectedMenuItem =1" [ngClass]="{'active':selectedMenuItem ==1}">
+                <div class="mx-auto text-center">
+                  <mat-icon>remove_red_eye</mat-icon>
+                  <h4 class="d-block">Activity</h4>
+                </div>
+              </mat-grid-tile>
+              <mat-grid-tile class="mx-3 mb-1 menu-item" (click)="selectedMenuItem =2" [ngClass]="{'active':selectedMenuItem ==2}">
+                <div class="mx-auto text-center">
+                  <mat-icon>offline_bolt</mat-icon>
+                  <h4 class="d-block">Moments</h4>
+                </div>
+              </mat-grid-tile>
+              <mat-grid-tile class="mx-3 mb-1 menu-item" (click)="selectedMenuItem =3" [ngClass]="{'active':selectedMenuItem ==3}">
+                <div class="mx-auto text-center">
+                  <mat-icon>group</mat-icon>
+                  <h4 class="d-block">Friends</h4>
+                </div>
+              </mat-grid-tile>
+              <mat-grid-tile class="mx-3 menu-item" (click)="selectedMenuItem =4" [ngClass]="{'active':selectedMenuItem ==4}">
+                <div class="mx-auto text-center">
+                  <mat-icon>settings</mat-icon>
+                  <h4 class="d-block">Edit Profile</h4>
+                </div>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </div>
+        </div>
+        <!--account-information card html end-->
+        <!--tweets info card html start-->
+        <div class="col-md-6 d-inline-block tweets card-border">
+          <mat-tab-group>
+            <mat-tab label="Tweets">
+              <div class="d-block m-4 tweet " *ngFor="let item of tweetsList">
+                <img class="d-inline-block user-image-profile" src="assets/images/twitter/userImage.jpg" />
+                <div class="tweet-content p-2">
+                  <div class="user-info col-md-7 d-inline-block font-weight-bold">
+                    <span class="d-inline-block mt-2 " style="font-weight:bold">Azita Hatami</span>
+                    <mat-icon class="mx-2 align-middle">check_circle</mat-icon>
+                    <span class="d-inline-block mt-2  main-color" style="font-weight:bold">Azita_hatami</span>
+                  </div>
+                  <div class="col-md-5 d-inline-block tweet-time text-end main-color">
+                    <mat-icon class="mx-2 align-middle ">access_time</mat-icon>
+                    <span class="d-inline-block mt-2 font-weight-bold ">{{item.time}}</span>
+                  </div>
+                  <div class="tweet-description py-3">
+                    <p>{{item.description}}</p>
+                  </div>
+                  <div class="img row " *ngIf="item.files && item.files.length">
+                    <div class="col-md-4 px-0" *ngFor="let img of item.files">
+                      <img class="p-2  img-file" src="{{img.src}}" alt="" title="" />
+                    </div>
+                  </div>
+                  <div class="comment p-2" *ngFor="let comment of item.comments">
+                    <div class="user-info col-md-7 d-inline-block font-weight-bold">
+                      <div class="d-flex align-items-center">
+                        <img class="d-inline-block" src="assets/images/twitter/commentOnTweet.jpg" alt="" title="" />
+                        <span class="d-inline-block mt-2 " style="font-weight:bold">{{comment.name}} {{comment.lastName}}</span>
+                        <mat-icon class="mx-2 main-color" style="vertical-align:middle">check_circle</mat-icon>
+                        <span class="d-inline-block mt-2 font-weight-bold main-color" style="font-weight:bold">{{comment.userName}}</span>
+                      </div>
+                    </div>
+                    <div class="col-md-5 d-inline-block tweet-time text-end align-top main-color">
+                      <mat-icon class="mx-2 align-middle main-color">access_time</mat-icon>
+                      <span class="d-inline-block mt-2 font-weight-bold main-color">{{comment.time}}</span>
+                    </div>
+                    <p>
+                      {{comment.description}}
+                    </p>
+                  </div>
+                  <mat-grid-list class="mt-2" cols="4" rowHeight="4:1">
+                    <mat-grid-tile class="primery-bg">
+                      <h4 class="font-weight-bold m-0 main-color">
+                        <mat-icon class="mx-3 align-middle">textsms</mat-icon>{{item.commentCount}}
+                      </h4>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="primery-bg side-border">
+                      <h4 class="font-weight-bold m-0 main-color">
+                        <mat-icon class="mx-3 main-color">loop</mat-icon>{{item.replyCount}}
+                      </h4>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="primery-bg right-border">
+                      <h4 class="font-weight-bold m-0 main-color">
+                        <mat-icon class="mx-3 align-middle primery-color">favorite</mat-icon>{{item.like}}
+                      </h4>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="primery-bg">
+                      <h4 class="font-weight-bold m-0 main-color">
+                        <mat-icon class="mx-3 align-middle">rotate_right</mat-icon>
+                      </h4>
+                    </mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Tweets && ReTweets">
+
+            </mat-tab>
+            <mat-tab label="Likes">
+            </mat-tab>
+          </mat-tab-group>
+
+        </div>
+        <!--tweets info card html end-->
+        <div class="col-md-3 d-inline-block align-top trends">
+          <div class="mx-3 w-100 mb-3 card-border overflow-hidden">
+            <mat-toolbar class="primery-bg trends-box-title">
+              <mat-toolbar-row>
+                <span>Trends For You</span>
+                <span class="example-spacer"></span>
+                <mat-icon class="example-icon main-color" aria-hidden="false" aria-label="">settings</mat-icon>
+              </mat-toolbar-row>
+            </mat-toolbar>
+            <mat-list role="list">
+              <mat-list-item role="listitem" class="py-2  position-relative trend-item" *ngFor="let item of trendsList;let i=index" [ngClass]="{'bottem-border' : i < trendsList.length-1}">
+                <div>
+                  <p class="d-block">{{item.title}}</p>
+                  <p style="color:#aeb2b7">{{item.tweetNum}}</p>
+                </div>
+                <mat-icon class="main-color">keyboard_arrow_down</mat-icon>
+              </mat-list-item>
+
+            </mat-list>
+            <button class="my-3 mx-auto text-center d-block" mat-stroked-button (click)="showInfo()">SEE MORE</button>
+          </div>
+          <div class="mx-3 w-100 overflow-hidden card-border options-to-follow-card">
+            <mat-toolbar class="primery-bg options-card-title">
+              <mat-toolbar-row>
+                <span>You Should Follow</span>
+                <span class="example-spacer"></span>
+                <mat-icon class="example-icon" aria-hidden="false" aria-label="">loop</mat-icon>
+              </mat-toolbar-row>
+            </mat-toolbar>
+            <mat-list role="list">
+              <mat-list-item role="listitem" class="py-0 position-relativebottem-border suggestedUser" *ngFor="let item of suggestedUsers;let i=index" [ngClass]="{'bottem-border' : i < suggestedUsers.length-1}">
+                <div class="d-flex align-items-center">
+                  <img src="{{item.img.src}}" alt="" title="" />
+                  <div class="px-3 ">
+                    <span class="d-block font-weight-bold">{{item.name}} {{item.lastName}}</span>
+                    <span class="main-color" style="">{{item.userName}}</span>
+                  </div>
+                </div>
+                <button mat-flat-button color="primary" (click)="showInfo()">Follow</button>
+              </mat-list-item>
+            </mat-list>
+            <button class="my-3 mx-auto text-center d-block" mat-stroked-button (click)="showInfo()">SEE MORE</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+</main>
+
+<!--<router-outlet></router-outlet>-->
